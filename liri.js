@@ -88,11 +88,16 @@ prompt.get({
 //twitter function
 function myTwitter(){
 	//this assigns the variable client to get the information from the twitterKeys variable set above so we can access twitters information
+	var twitterConsumerKey = keys.twitterKeys.consumer_key
+	var twitterConsumerSecret = keys.twitterKeys.consumer_secret
+	var twitterAccessTokenKey =  keys.twitterKeys.access_token_key
+	var twitterAccessTokenSecret = keys.twitterKeys.access_token_secret
+
 	var client = new Twitter({
-		consumer_key: twitterKeys.consumer_key,
-		consumer_secret: twitterKeys.consumer_secret,
-		access_token_key: twitterKeys.access_token_key,
-		access_token_secret: twitterKeys.access_token_secret,
+		consumer_key: keys.twitterKeys.consumer_key,
+		consumer_secret: keys.twitterKeys.consumer_secret,
+		access_token_key: keys.twitterKeys.access_token_key,
+		access_token_secret: keys.twitterKeys.access_token_secret,
 	});
 	//this sets the variable params to search the username Redpoint_Media and only return back the last 20 tweets and then it doesn't trim the username so the username information will come up instead of the twitter id#
 	var params = {
